@@ -2,4 +2,6 @@
 
 [Guide to Assembly Language Programming in Linux](https://www.amazon.com/Guide-Assembly-Language-Programming-Linux/dp/0387258973) 学习笔记、代码、及适当的翻译。
 
-并不会对全书进行逐句的翻译，而是对学习的内容进行摘要和整理。
+并不会对全书进行逐句的翻译，而是对学习的内容进行摘要和整理。所以如果使用此项目进行辅助学习的话，请一定结合原文进行理解。
+
+共勉。
