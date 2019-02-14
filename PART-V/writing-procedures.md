@@ -1,3 +1,28 @@
+- [简介 (Introduction)](#%E7%AE%80%E4%BB%8B-introduction)
+- [什么是栈 (What Is a Stack?)](#%E4%BB%80%E4%B9%88%E6%98%AF%E6%A0%88-what-is-a-stack)
+- [栈的实现 (Implementation of the Stack)](#%E6%A0%88%E7%9A%84%E5%AE%9E%E7%8E%B0-implementation-of-the-stack)
+- [栈的相关操作 (Stack Operations)](#%E6%A0%88%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C-stack-operations)
+  - [基本指令 (Basic Instructions)](#%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4-basic-instructions)
+  - [附加指令 (Additional Instructions)](#%E9%99%84%E5%8A%A0%E6%8C%87%E4%BB%A4-additional-instructions)
+  - [栈对标志的操作 (Stack Operations on Flags)](#%E6%A0%88%E5%AF%B9%E6%A0%87%E5%BF%97%E7%9A%84%E6%93%8D%E4%BD%9C-stack-operations-on-flags)
+  - [栈对所有通用寄存器的操作 (Stack Operations on All General-Purpose Registers)](#%E6%A0%88%E5%AF%B9%E6%89%80%E6%9C%89%E9%80%9A%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8%E7%9A%84%E6%93%8D%E4%BD%9C-stack-operations-on-all-general-purpose-registers)
+- [栈的使用 (Uses of the Stack)](#%E6%A0%88%E7%9A%84%E4%BD%BF%E7%94%A8-uses-of-the-stack)
+  - [存放临时数据 (Temporary Storage of Data)](#%E5%AD%98%E6%94%BE%E4%B8%B4%E6%97%B6%E6%95%B0%E6%8D%AE-temporary-storage-of-data)
+  - [转移控制 (Transfer of Control)](#%E8%BD%AC%E7%A7%BB%E6%8E%A7%E5%88%B6-transfer-of-control)
+  - [传参 (Parameter Passing)](#%E4%BC%A0%E5%8F%82-parameter-passing)
+- [过程指令 (Procedure Instructions)](#%E8%BF%87%E7%A8%8B%E6%8C%87%E4%BB%A4-procedure-instructions)
+  - [程序控制是如何被转移的 (How Is Program Control Transferred?)](#%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E6%98%AF%E5%A6%82%E4%BD%95%E8%A2%AB%E8%BD%AC%E7%A7%BB%E7%9A%84-how-is-program-control-transferred)
+  - [返回指令 (The ret Instruction)](#%E8%BF%94%E5%9B%9E%E6%8C%87%E4%BB%A4-the-ret-instruction)
+- [传参 (Parameter Passing)](#%E4%BC%A0%E5%8F%82-parameter-passing-1)
+  - [寄存器传参 (Register Method)](#%E5%AF%84%E5%AD%98%E5%99%A8%E4%BC%A0%E5%8F%82-register-method)
+    - [寄存器传参的利弊](#%E5%AF%84%E5%AD%98%E5%99%A8%E4%BC%A0%E5%8F%82%E7%9A%84%E5%88%A9%E5%BC%8A)
+  - [栈传参 (Stack Method)](#%E6%A0%88%E4%BC%A0%E5%8F%82-stack-method)
+  - [该由谁来清理栈 (Who Should Clean Up the Stack?)](#%E8%AF%A5%E7%94%B1%E8%B0%81%E6%9D%A5%E6%B8%85%E7%90%86%E6%A0%88-who-should-clean-up-the-stack)
+  - [保存调用者的状态 (Preserving Calling Procedure State)](#%E4%BF%9D%E5%AD%98%E8%B0%83%E7%94%A8%E8%80%85%E7%9A%84%E7%8A%B6%E6%80%81-preserving-calling-procedure-state)
+  - [哪些寄存器需要被保存 (Which Registers Should Be Saved?)](#%E5%93%AA%E4%BA%9B%E5%AF%84%E5%AD%98%E5%99%A8%E9%9C%80%E8%A6%81%E8%A2%AB%E4%BF%9D%E5%AD%98-which-registers-should-be-saved)
+  - [When to Use pusha](#when-to-use-pusha)
+  - [ENTER 和 LEAVE 指令](#enter-%E5%92%8C-leave-%E6%8C%87%E4%BB%A4)
+
 在结构化编程中，过程(procedure) 是一个重要的组成部分。IA-32架构中，栈在过程的调用和执行中扮演了重要的角色。我们也会描述汇编语言指令如何维护栈。
 
 在介绍了栈之后，我们将看一看 过程(procedure) 的调用和返回的指令。和高级语言不同，汇编语言在调用过程时，不支持传递参数。有两种解决方式: 通过寄存器，通过栈。将详细讨论这两种方式。
