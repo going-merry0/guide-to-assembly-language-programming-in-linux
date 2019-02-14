@@ -138,7 +138,7 @@ IA-32架构提供了 10个32位 和 6个16位寄存器。这些寄存器被分�
   * 如果 granularity bit 是 0 的话，segment size 可以从 1byte 到 1MB，以一个字节为增长步长。
   * 如果 granularity bit 是 1 的话，segment size 可以从 4KB 到 4GB，以 4KB 为增长步长。
 
-* D/B Bit: 在代码段中，被称为 D bit, 表示默认的操作数和便宜的大小。如果 D 是 0，默认的操作和偏移量为 16位。对于 32位的操作数和偏移量而言，D bit 必须设置为 1。在数据段中，被称为 B bit，用于控制栈和栈指针的大小。如果 B bit 是 0 的话，那么栈的大小上限为 0xFFFF，且使用 SP 寄存器；如果 B bit 是 1 的话，将使用 ESP 寄存器，且栈的大小上限为 0xFFFFFFFF，书中以 H 结尾即表示 16 进制的数，为了方便阅读，这里使用的是 `0x` 前缀。通常在 real-mode 下该位被清除，在 protected-mode 下被设置。
+* D/B Bit: 在代码段中，被称为 D bit, 表示默认的操作数和偏移的大小。如果 D 是 0，默认的操作和偏移量为 16位。对于 32位的操作数和偏移量而言，D bit 必须设置为 1。在数据段中，被称为 B bit，用于控制栈和栈指针的大小。如果 B bit 是 0 的话，那么栈的大小上限为 0xFFFF，且使用 SP 寄存器；如果 B bit 是 1 的话，将使用 ESP 寄存器，且栈的大小上限为 0xFFFFFFFF，书中以 H 结尾即表示 16 进制的数，为了方便阅读，这里使用的是 `0x` 前缀。通常在 real-mode 下该位被清除，在 protected-mode 下被设置。
 
 * S Bit: 该 bit 表示该段是系统段(system segement)还是应用程序段(application segment)。如果该 bit 是 0，则表示是系统段，否则是应用程序段。
 
