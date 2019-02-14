@@ -217,6 +217,8 @@ mov     EAX,27
 sal     EAX,4
 ```
 
+补充一下，sal(shift arithmetic left) 和 shl(shift logical left) 的机器指令完全一样。因为右移是有区别的，所以加入 sal 应该就是为了完整起见。
+
 ### 有参数的宏
 
 例子:
