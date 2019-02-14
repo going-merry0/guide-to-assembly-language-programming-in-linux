@@ -4,7 +4,7 @@
 
 - [汇编语言一瞥 (A First Look at Assembly Language)](./a-first-look-at-assembly-language.md)
 - [进一步了解汇编 (More on Assembly Language)](./more-on-assembly-language.md)
-- [编写 Procedures (Writing Procedures)](./writing-procedure.md)
+- [编写 Procedures (Writing Procedures)](./writing-procedures.md)
 - [进一步了解 Procedure (More on Procedures)](./more-on-procedures.md)
 - [地址模式 (Addressing Modes)](./addressing-modes.md)
 - [算术指令 (Arithmetic Instructions)](./arithmetic-instructions.md)
