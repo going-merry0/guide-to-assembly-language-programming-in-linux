@@ -1,3 +1,13 @@
+- [简介 (Introduction)](#%E7%AE%80%E4%BB%8B-introduction)
+- [局部变量 (Local Variables)](#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F-local-variables)
+- [模块化 (Multiple Source Program Modules)](#%E6%A8%A1%E5%9D%97%E5%8C%96-multiple-source-program-modules)
+  - [GLOBAL 指令](#global-%E6%8C%87%E4%BB%A4)
+  - [EXTERN 指令](#extern-%E6%8C%87%E4%BB%A4)
+- [具有变长参数的过程 (Procedure with Variable Number of Parameters)](#%E5%85%B7%E6%9C%89%E5%8F%98%E9%95%BF%E5%8F%82%E6%95%B0%E7%9A%84%E8%BF%87%E7%A8%8B-procedure-with-variable-number-of-parameters)
+  - [例12.3 通过栈传递变长参数](#%E4%BE%8B123-%E9%80%9A%E8%BF%87%E6%A0%88%E4%BC%A0%E9%80%92%E5%8F%98%E9%95%BF%E5%8F%82%E6%95%B0)
+  - [一些注意点](#%E4%B8%80%E4%BA%9B%E6%B3%A8%E6%84%8F%E7%82%B9)
+  - [例子12.8](#%E4%BE%8B%E5%AD%90128)
+
 在前面的章节中，我们已经介绍了关于过程的基础内容。我们讨论了在调用过程时传递参数的两种方式。不过，我们还没有讨论在汇编语言中如何处理过程的局部变量，这一节将讨论这个内容。
 
 尽管有些比较短的汇编程序可以写在单个文件中，真实的应用程序还是被分割到不同的文件中，这被称为模块化。这就涉及到如何将多个源文件进行汇编，我们也会讨论这一点。
