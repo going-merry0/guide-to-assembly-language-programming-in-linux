@@ -7,6 +7,6 @@
 - [PART I - 概览](./PART-I/README.md)
 - [PART II - 计算机组成](./PART-II/README.md)
 - PART III - Linux 介绍及安装(略)
-- PART IV - NASM 汇编语言编译器的介绍及安装调试(略)
+- [PART IV - NASM 汇编语言编译器的介绍及安装调试](./PART-IV/README.md)
 - [PART V - 汇编语言](./PART-V/README.md)
 - [PART VI - 高阶汇编语言](./PART-VI/README.md)
