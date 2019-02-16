@@ -6,7 +6,7 @@
 - [进一步了解汇编 (More on Assembly Language)](./more-on-assembly-language.md)
 - [编写 Procedures (Writing Procedures)](./writing-procedures.md)
 - [进一步了解 Procedure (More on Procedures)](./more-on-procedures.md)
-- [地址模式 (Addressing Modes)](./addressing-modes.md)
+- [寻址模式 (Addressing Modes)](./addressing-modes.md)
 - [算术指令 (Arithmetic Instructions)](./arithmetic-instructions.md)
 - [条件执行 (Conditional Execution)](./contional-execution.md)
 - [逻辑和位操作 (Logical and Bit Operations)](./logical-and-bit-operations.md)
