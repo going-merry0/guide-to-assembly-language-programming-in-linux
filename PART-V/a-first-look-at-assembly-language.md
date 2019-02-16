@@ -374,7 +374,7 @@ table1[1] = 99
 ```asm
 mov  EBX,table1    ;copy address of table1 to EBX
 mov  [EBX],100     ;table1[0] = 100
-mov  EBX,2         ;EBX = EBX + 2
+add  EBX,2         ;EBX = EBX + 2
 mov  [EBX],99      ;table[1] = 99
 ```
 
